@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+<style>
+    html {
+        /* box-sizing: border-box; */
+        font-size: calc(100vw / 60);
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    
+    .Tag {
+        position: relative;
+        width: 200px;
+        height: 50px;
+        font-size: 15px;
+    }
+    
+    .Tag ::before {
+        content: "";
+        width: 48px;
+        height: 2px;
+        display: block;
+        bottom: -2px;
+        position: absolute;
+        right: -51px;
+        background: rgba(20, 143, 221);
+        transform: rotate(30deg);
+        transform-origin: 0 0;
+    }
+    
+    .Tag ::after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        display: block;
+        bottom: -34px;
+        border-radius: 50%;
+        position: absolute;
+        right: -62px;
+        background: rgba(20, 143, 221);
+        transform: rotate(30deg);
+        transform-origin: 0 0;
+    }
+    
+    .Tag .content {
+        position: absolute;
+        padding: 20px;
+        background: rgba(20, 143, 221, 0.68);
+        box-shadow: 0 0 10px rgb(0, 128, 255, 0.75);
+        border: 1px solid rgb(127, 177, 255, 0.75);
+        color: #efefef;
+    }
+</style>
+
+<body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+</body>
+
+</html>
